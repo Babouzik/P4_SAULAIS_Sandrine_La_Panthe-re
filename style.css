@@ -11,6 +11,7 @@ a,
 button {
     transition: all .3s ease-in-out;
     outline: none!important;
+    text-decoration: none;
 }
 
 a:hover {
@@ -43,6 +44,9 @@ a:hover {
     padding-left: 0;
     padding-right: 0;
 }
+.bloc.bg-dots-bg {
+    background-image: url("img/agence-la-panthere.webp");
+}
 
 .bloc-lg {
     padding: 100px 50px;
@@ -54,6 +58,7 @@ a:hover {
 
 .bloc-sm {
     padding: 20px 50px;
+    display: contents;
 }
 
 .bg-center,
@@ -91,7 +96,6 @@ a:hover {
 }
 
 .texture-paper::before {
-    background: url("img/texture-paper.png");
     background-size: 280px 280px;
 }
 
@@ -304,6 +308,7 @@ a:hover {
 .navbar-brand img {
     max-height: 200px;
     margin: 0 5px 0 0;
+    margin-top: 20px;
     display: inline;
 }
 
@@ -317,9 +322,10 @@ a:hover {
 
 .navbar .nav {
     padding-top: 2px;
-    margin-right: -16px;
+    margin-top: -1px;
     float: right;
     z-index: 1;
+    padding: auto;
 }
 
 .nav > li {
@@ -340,6 +346,7 @@ a:hover {
 .navbar-toggle {
     margin: 10px 10px 0 0;
     border: 0px;
+    margin-top: 25px;
 }
 
 .navbar-toggle:hover {
@@ -362,11 +369,23 @@ a:hover {
     z-index: 2;
 }
 
+textarea .form-control {
+    height: auto;
+}
+
+#form_1 {
+    width: 50%;
+}
+
+.col-sm-6 p {
+    font-size: 18px;
+}
+
 @media (min-width: 768px) {
     .site-navigation {
         position: absolute;
         top: 50%;
-        right: 20px;
+        right: 70px;
         transform: translate(0, -50%);
         -webkit-transform: translateY(-50%);
     }
@@ -401,6 +420,16 @@ a:hover {
         float: none;
         margin: 10px auto 0;
     }
+
+    .col-sm-6 p {
+        font-size: 18px;
+    }
+
+    
+}
+
+.text-center {
+    text-align: center;
 }
 
 .nav > li > .dropdown a {
@@ -475,6 +504,10 @@ button {
     box-shadow: 0 1px 3px rgba(0, 0, 1, .25), inset 0 1px 0 0 rgba(255, 255, 255, .15);
 }
 
+.col-sm-12  h2 {
+    margin-bottom: 40px;
+}
+
 .icon-md {
     font-size: 30px!important;
 }
@@ -505,9 +538,19 @@ button {
     border-radius: 0 0 29px 29px;
 }
 
+#form_1 {
+    width: auto;
+}
+
 .form-control {
-    border-color: rgba(0, 0, 0, .1);
-    box-shadow: none;
+    display: block ;
+    height: 34px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: solid 1px #ccc;
+    box-shadow: 0 1px 3px rgb(0 0 1 / 25%), inset 0 1px 0 0 rgb(255 255 255 / 15%);
 }
 
 .scrollToTop {
@@ -652,6 +695,16 @@ a {
     font-family: "helvetica";
     font-weight: 400;
     color: #575757!important;
+    font-size: 18px;
+}
+
+.citation {
+    font-style: italic;
+    font-size: large;
+}
+
+.auteur {
+    font-size: 21px;
 }
 
 .container {
@@ -677,18 +730,35 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 16px;
+}
+
+.col-sm-6 p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-top: 26px;
 }
 
 .tight-width-whitespace {
-    max-width: 600px;
+    max-width: 700px;
     margin: auto auto auto auto;
+}
+
+
+.col-sm-12 p {
+    color: #FFFFFF !important;
+    font-size: 20px;
+    margin-top: -10px;
+    padding-top: 20px;
 }
 
 .h1 {
     font-size: 20px;
     font-family: "Open Sans";
 }
+
+
 
 .cta-hero {
     margin-top: 22px;
@@ -700,17 +770,22 @@ p {
 }
 
 .social {
-    max-width: 400px;
+    max-width: 500px;
     margin: auto auto auto auto;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 24px;
+    font-weight: 500;
     line-height: 1.4em;
 }
 
 h3 {
-    font-size: 15px;
+    font-size: 18px;
     text-transform: uppercase;
     font-weight: 700;
     color: #333333!important;
@@ -741,6 +816,13 @@ h4 {
 
 .portfolio-thumb {
     margin-bottom: 24px;
+    width: 100%;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .portfolio-row {
@@ -753,7 +835,7 @@ h4 {
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
+    background-color: #333333;
     padding: 40px 40px 40px 40px;
 }
 
@@ -776,11 +858,17 @@ h4 {
 
 .tc-white {
     color: #F3976C!important;
+    display: flex;
+    justify-content: center;
 }
 
 .btn-atomic-tangerine {
     background: #F3976C;
     color: #FFFFFF!important;
+    border-radius: 40px;
+    border: none;
+    box-shadow: 0 1px 3px rgb(0 0 1 / 25%), inset 0 1px 0 0 rgb(255 255 255 / 15%);
+    
 }
 
 .btn-atomic-tangerine:hover {
@@ -807,14 +895,6 @@ h4 {
 .icon-dark-slate-blue {
     color: #364577!important;
     border-color: #364577!important;
-}
-
-.bg-dots-bg {
-    background-image: url("img/dots-bg.png");
-}
-
-.bg-lines-h2-bg {
-    background-image: url("img/lines-h2-bg.png");
 }
 
 .bg-banniere {
